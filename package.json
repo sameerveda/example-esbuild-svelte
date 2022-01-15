@@ -1,0 +1,17 @@
+{
+  "name": "svelte-example-with-esbuild",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "node build.js --watch",
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "esbuild-svelte": "^0.6.1",
+    "estrella": "^1.4.1",
+    "postcss": "^8.4.5",
+    "postcss-nested": "^5.0.6",
+    "serve-http": "^1.0.6"
+  },
+  "dependencies": {}
+}
