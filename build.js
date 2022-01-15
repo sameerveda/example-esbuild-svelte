@@ -1,5 +1,5 @@
-const { build, watch, cliopts } = require('estrella');
-const { svelte_postcss, esbuild_postcss } = require('./build-scripts/postcss');
+const { build, cliopts } = require('estrella');
+const { esbuild_postcss } = require('./build-scripts/postcss');
 const sveltePlugin = require('esbuild-svelte');
 
 build({
@@ -8,7 +8,7 @@ build({
   outdir: './public/build/',
   logLevel: 'info',
   plugins: [
-    sveltePlugin({ preprocess: svelte_postcss }),
+    sveltePlugin(require('./svelte.config')),
     // handle files which are not handled by sveltePlugin like imports and raw non .svelte css/postcss files
     esbuild_postcss(),
   ],
